@@ -54,17 +54,6 @@ Install MongoDB on your local machine or use a cloud-based service like MongoDB 
 
 Configure the database connection in database.py:
 
-python
-from motor.motor_asyncio import AsyncIOMotorClient
-
-client = AsyncIOMotorClient("mongodb://localhost:27017")
-db = client['chat_database']
-
-python
-from sqlalchemy.ext.asyncio import create_async_engine
-
-DATABASE_URL = "mysql+aiomysql://user:password@localhost/chat_db"
-engine = create_async_engine(DATABASE_URL)
 
 4. Set Up Environment Variables
 Store sensitive information (e.g., API keys) in an .env file:
@@ -76,9 +65,6 @@ DATABASE_URL=your_database_url
 5. Run the Application
 Start the FastAPI application locally using Uvicorn:
 
-bash
-uvicorn app.main:app --reload
-The API will be available at http://127.0.0.1:8000.
 
 6. Test API Endpoints
 Use tools like Postman or cURL to test the API. For example:
@@ -98,17 +84,6 @@ To containerize the application for deployment:
 
 Create a Dockerfile:
 
-dockerfile
-FROM python:3.10-slim
-WORKDIR /app
-COPY . .
-RUN pip install -r requirements.txt
-CMD ["uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "8000"]
-Build and run the Docker image:
-
-bash
-docker build -t fastapi-chat-api .
-docker run -p 8000:8000 fastapi-chat-api
 Usage and Deployment
 API is accessible via endpoints described in the Test API Endpoints section.
 
