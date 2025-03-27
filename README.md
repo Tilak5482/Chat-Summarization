@@ -44,15 +44,13 @@ fastapi_chat_api/
 1.Set Up a Virtual Environment
 Create and activate a Python virtual environment to isolate dependencies:
 
-bash
+
 python -m venv venv
-source venv/bin/activate  # For Linux/Mac
 venv\Scripts\activate  # For Windows
 
 2. Install Dependencies
 Install the required Python libraries specified in the requirements.txt file:
 
-bash
 pip install -r requirements.txt
 Dependencies include:
 
@@ -76,7 +74,6 @@ Configure the database connection in database.py:
 4. Set Up Environment Variables
 Store sensitive information (e.g., API keys) in an .env file:
 
-plaintext
 OPENAI_API_KEY=your_openai_api_key
 DATABASE_URL=your_database_url
 
