@@ -2,7 +2,8 @@
 
 ## Project Description
 This FastAPI-based REST API processes user chat data efficiently. It supports real-time ingestion of chat messages, conversation retrieval and filtering, LLM-powered summarization, and heavy CRUD operations. Designed for scalability and performance, the project incorporates robust database indexing and async queries.
-Project Structure
+
+##Project Structure
 fastapi_chat_api/
 ├── app/
 │   ├── __init__.py
@@ -47,6 +48,7 @@ bash
 python -m venv venv
 source venv/bin/activate  # For Linux/Mac
 venv\Scripts\activate  # For Windows
+
 2. Install Dependencies
 Install the required Python libraries specified in the requirements.txt file:
 
