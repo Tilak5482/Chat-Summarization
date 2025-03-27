@@ -2,6 +2,22 @@
 
 ## Project Description
 This FastAPI-based REST API processes user chat data efficiently. It supports real-time ingestion of chat messages, conversation retrieval and filtering, LLM-powered summarization, and heavy CRUD operations. Designed for scalability and performance, the project incorporates robust database indexing and async queries.
+Project Structure
+fastapi_chat_api/
+├── app/
+│   ├── __init__.py
+│   ├── main.py  # Entry point for the app
+│   ├── database.py  # Database connection
+│   ├── models.py  # Data models/schema
+│   ├── routers/
+│   │   ├── chats.py  # Routes for chat endpoints
+│   │   ├── users.py  # Routes for user chat history
+│   ├── services/
+│   │   └── summarizer.py  # LLM summarization logic
+│   ├── utils.py  # Utility functions
+├── Dockerfile  # Docker configuration
+├── requirements.txt  # Project dependencies
+└── README.md  # Project documentation
 
 ---
 
